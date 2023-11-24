@@ -17,6 +17,9 @@ body{
     margin: 50px auto;
 }
 
+header{
+    position: relative;
+}
 header .logo{
     font-weight: 600;
     font-size: 20px;
@@ -49,6 +52,51 @@ header .presentation{
     background-color: #bcbcbc;
     position: relative;
 }
+header .shop-cart-button{
+    float: right;
+    cursor: pointer;
+    transition: color 0.4s ease 0s;
+}
+header .shop-cart-button:hover,
+header .shop-cart-button.active{
+    color: #ca5252;
+}
+
+header .shop-cart-list{
+    position: absolute;
+    top: 30px;
+    right: 0;
+    width: 450px;
+    z-index: 10;
+    background-color: #fafafa;
+    box-shadow: 4px 4px 15px -7px #606060;
+    padding: 20px;
+}
+header .shop-cart-list .item{
+    width: 100%;
+    float: left;
+}
+header .shop-cart-list .item:not(:last-child){
+    margin-bottom: 10px;
+}
+header .shop-cart-list .item:hover{
+    background-color: rgb(236, 236, 236)
+}
+header .shop-cart-list .item img{
+    width: 70px;
+    height: 50px;
+    float: left;
+    margin-right: 20px;
+}
+header .shop-cart-list .item h2{
+    font-size: 20px;
+    margin-bottom: 10px;
+}   
+header .shop-cart-list .item p{
+    color: #797979;
+    font-weight: 600;
+}
+
  header .presentation::after{
     content: 'Best stuff for your house';
     position: absolute;
@@ -86,6 +134,7 @@ header .presentation{
     overflow: hidden;
     position: relative;
     padding-bottom: 20px;
+    box-shadow: 1px 1px 5px #c0c0c0;
  }
  main .item img{
     width: 390px;
