@@ -71,16 +71,18 @@ header .shop-cart-list{
     background-color: #fafafa;
     box-shadow: 4px 4px 15px -7px #606060;
     padding: 20px;
+    padding-bottom: 10px;
 }
 header .shop-cart-list .item{
     width: 100%;
     float: left;
+    position: relative;
 }
 header .shop-cart-list .item:not(:last-child){
     margin-bottom: 10px;
 }
 header .shop-cart-list .item:hover{
-    background-color: rgb(236, 236, 236)
+    background-color: rgb(235, 234, 234)
 }
 header .shop-cart-list .item img{
     width: 70px;
@@ -95,6 +97,30 @@ header .shop-cart-list .item h2{
 header .shop-cart-list .item p{
     color: #797979;
     font-weight: 600;
+}
+header .shop-cart-list .item .delete-icon{
+    float: right;
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+    padding: 10px;
+    width: 18px;
+    height: 18px;
+    transition: all 0.4s ease 0s;
+}
+header .shop-cart-list .item .delete-icon:hover{
+    color: #ca5252;
+    transform: scale(1.4);
+}
+
+header .shop-cart-list .sum{
+    float: left;
+    width: 100%;
+    font-weight: 600;
+    font-size: 18px;
+    margin: 0;
+    text-decoration: underline;
 }
 
  header .presentation::after{
@@ -117,7 +143,21 @@ header .shop-cart-list .item p{
     font-weight: 400;
     color: white;
  }
-
+ .categories div{
+    display: inline-block;
+    background-color: #f2f2f2;
+    border-radius: 50px;
+    padding: 10px 20px;
+    margin-bottom: 25px;
+    margin-right: 15px;
+    font-weight: 400;
+    cursor: pointer;
+    transition: all 0.4s ease 0s;
+ }
+ .categories div:hover{
+    background-color: #919191;
+    transform: scale(1.1);
+ }
 
  main{
     display: flex;
