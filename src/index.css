@@ -176,25 +176,32 @@ header .shop-cart-list .sum{
     padding-bottom: 20px;
     box-shadow: 1px 1px 5px #c0c0c0;
  }
- main .item img{
+ main .item img,
+ .full-item img{
     width: 390px;
     height: 330px;
     border-radius: 10px 10px 0px 0px;
     transition: all 0.4s ease 0s;
+    cursor: pointer;
  }
- main .item img:hover{
+ main .item img:hover,
+ .full-item img:hover{
     transform: scale(1.05);
  }
 
- main h2, main p, main b{
+ main h2, .full-item h2,
+ main p, .full-item p,
+ main b, .full-item b{
     margin: 10px 20px;
     color: #333;
  }
- main b{
+ main b,
+ .full-item b{
     color: #5fa36a;
  }
 
- main .add-to-cart{
+ main .add-to-cart,
+ .full-item .add-to-cart{
     position: absolute;
     right: 20px;
     bottom: 20px;
@@ -209,9 +216,33 @@ header .shop-cart-list .sum{
     font-weight: 600;
     transition: all 0.4s ease 0s;
  }
- main .add-to-cart:hover{
+ main .add-to-cart:hover,
+ .full-item .add-to-cart:hover{
     transform: scale(1.4);
     background: #b34949;
+ }
+
+ .full-item{
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: #000000d0;
+    z-index: 100;
+    overflow: auto;
+ }
+ .full-item > div{
+    width: 600px;
+    position: relative;
+    margin: 10% auto;
+    padding: 40px 30px;
+    background: #fff;
+    border-radius: 9px;
+ }
+ .full-item > div > img{
+    width: 600px;
+    height: 500px;
  }
 
  footer{
